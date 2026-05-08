@@ -165,6 +165,17 @@ export default function HomePage() {
           />
         )}
 
+        {/* アップロード中のローディング表示 (jobId がまだ未取得の場合) */}
+        {step === 'converting' && !jobId && (
+          <div className="flex flex-col items-center gap-6 py-20">
+            <div className="w-14 h-14 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            <div className="text-center">
+              <p className="text-white font-semibold">動画をアップロード中...</p>
+              <p className="text-sm text-gray-400 mt-1">大きなファイルは数十秒かかる場合があります</p>
+            </div>
+          </div>
+        )}
+
         {step === 'converting' && jobId && (
           <ProgressDisplay
             jobId={jobId}
