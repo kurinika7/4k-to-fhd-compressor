@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // fluent-ffmpeg はサーバーサイドのネイティブモジュールのため外部パッケージとして指定
-  serverExternalPackages: ['fluent-ffmpeg'],
-
   // 大容量ファイルのアップロードに対応（ローカル開発 & Railway）
   experimental: {
+    // fluent-ffmpeg はサーバーサイドのネイティブモジュールのため外部パッケージとして指定
+    serverComponentsExternalPackages: ['fluent-ffmpeg'],
     serverActions: {
       bodySizeLimit: '10gb',
     },
