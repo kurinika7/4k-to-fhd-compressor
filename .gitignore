@@ -1,0 +1,27 @@
+# 依存パッケージ
+node_modules/
+
+# Next.js ビルド成果物
+.next/
+out/
+
+# 環境変数（秘密情報）
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS
+.DS_Store
+
+# ログ
+*.log
+npm-debug.log*
+
+# 一時ファイル（動画の変換中間ファイル）
+/tmp/
+
+# エディタ設定
+.vscode/
+.idea/
